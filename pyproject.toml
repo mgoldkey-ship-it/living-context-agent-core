@@ -1,0 +1,9 @@
+[project]
+name = "living-context-agent-core"
+version = "1.0.0"
+description = "Reference FastAPI multi-agent backend with Living Documentation, Cold-Start Hydration, and least-privilege Agent Spawning"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,14 @@
+services:
+  agent-core:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - MEMORY_ROOT=/srv/app/workspace_memory
+      - CORE_API_KEY=${CORE_API_KEY:-change-me-in-prod}
+    volumes:
+      - agent_memory:/srv/app/workspace_memory
+    restart: unless-stopped
+
+volumes:
+  agent_memory:
